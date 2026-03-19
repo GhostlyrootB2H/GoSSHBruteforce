@@ -81,39 +81,8 @@ go build -o gosshtool cmd/gosshtool/main.go
 ./gosshtool -h
 Estimasi Waktu Instalasi
 Skenario	Waktu	Keterangan
-Go ≥ 1.22	2-5 menit	Normal, hanya download dependencies
-Go < 1.22	5-30 menit	Download Go 1.25 (140MB) + dependencies
-🇬🇧 English
-System Requirements
-OS: Linux (Ubuntu/Debian/Kali)
 
-Go: Version 1.22 or higher
-
-Masscan: For IP scanning (will be installed automatically)
-
-📌 IMPORTANT NOTE:
-If your Go version is below 1.22, the build process will automatically download Go 1.25 (~140MB). This happens ONLY ONCE and will take 5-30 minutes depending on your connection.
-
-Installation Steps
-bash
-# 1. Clone repository
-git clone https://github.com/GhostlyrootB2H/GoSSHBruteforce.git
-cd GoSSHBruteforce
-
-# 2. Install dependencies (masscan)
-chmod +x scripts/install_deps.sh
-sudo ./scripts/install_deps.sh
-
-# 3. Build tools
-go build -o gosshtool cmd/gosshtool/main.go
-
-# 4. Test if successful
-./gosshtool -h
-Installation Time Estimates
-Scenario	Time	Description
-Go ≥ 1.22	2-5 minutes	Normal, only downloading dependencies
-Go < 1.22	5-30 minutes	Downloading Go 1.25 (140MB) + dependencies
-🎯 Parameter Lengkap | Complete Parameters
+## 🎯 **Parameter Lengkap | Complete Parameters**
 🇮🇩 Bahasa Indonesia
 Parameter	Fungsi	Contoh
 -range	Scan IP range (CIDR)	-range 103.0.0.0/8
