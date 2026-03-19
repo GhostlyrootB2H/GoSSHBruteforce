@@ -1,5 +1,45 @@
-# Object file
-*.o
+# Binaries
+/build/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
 
-# Ada Library Information
-*.ali
+# Results
+/results/
+/*.txt
+!data/*.txt
+!configs/*.conf
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Dependencies
+vendor/
+
+# Local config
+configs/local.yaml
+
+# Wordlists (too big for git)
+/wordlists/
+!data/passwords.txt
+!data/usernames.txt
+
+# Temporary files
+tmp/
+temp/
