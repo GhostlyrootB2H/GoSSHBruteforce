@@ -82,7 +82,7 @@ go build -o gosshtool cmd/gosshtool/main.go
 Estimasi Waktu Instalasi
 Skenario	Waktu	Keterangan
 
-## 🎯 **Parameter Lengkap | Complete Parameters**
+# 🎯 **Parameter Lengkap | Complete Parameters**
 🇮🇩 Bahasa Indonesia
 Parameter	Fungsi	Contoh
 -range	Scan IP range (CIDR)	-range 103.0.0.0/8
