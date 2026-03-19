@@ -66,18 +66,18 @@
 #### **Langkah Instalasi**
 
 ```bash
-# 1. Clone repository
+ 1. Clone repository
 git clone https://github.com/GhostlyrootB2H/GoSSHBruteforce.git
 cd GoSSHBruteforce
 
-# 2. Install dependencies (masscan)
+ 2. Install dependencies (masscan)
 chmod +x scripts/install_deps.sh
 sudo ./scripts/install_deps.sh
 
-# 3. Build tools
+ 3. Build tools
 go build -o gosshtool cmd/gosshtool/main.go
 
-# 4. Tes apakah berhasil
+ 4. Tes apakah berhasil
 ./gosshtool -h
 
 ### **Estimasi Waktu Instalasi**
