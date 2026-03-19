@@ -80,7 +80,7 @@ go build -o gosshtool cmd/gosshtool/main.go
 # 4. Tes apakah berhasil
 ./gosshtool -h
 
-#### **Estimasi Waktu Instalasi**
+### **Estimasi Waktu Instalasi**
 | Skenario | Waktu | Keterangan |
 |----------|-------|------------|
 | Go ≥ 1.22 | 2-5 menit | Normal, hanya download dependencies |
