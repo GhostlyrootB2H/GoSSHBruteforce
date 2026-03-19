@@ -79,32 +79,42 @@ go build -o gosshtool cmd/gosshtool/main.go
 
 # 4. Tes apakah berhasil
 ./gosshtool -h
-Estimasi Waktu Instalasi
-Skenario	Waktu	Keterangan
+
+#### **Estimasi Waktu Instalasi**
+| Skenario | Waktu | Keterangan |
+|----------|-------|------------|
+| Go ≥ 1.22 | 2-5 menit | Normal, hanya download dependencies |
+| Go < 1.22 | 5-30 menit | Download Go 1.25 (140MB) + dependencies |
+
+---
 
 # 🎯 **Parameter Lengkap | Complete Parameters**
-🇮🇩 Bahasa Indonesia
-Parameter	Fungsi	Contoh
--range	Scan IP range (CIDR)	-range 103.0.0.0/8
--country	Scan per negara	-country id
--L	File daftar target	-L targets.txt
--U	File username	-U users.txt
--P	File password	-P passwords.txt
--t	Jumlah thread	-t 50
--rate	Kecepatan scan (packet/detik)	-rate 50000
--output	Folder hasil	-output ./hasil
--no-scan	Lewati scanning, langsung bruteforce	-no-scan
-🇬🇧 English
-Parameter	Function	Example
--range	Scan IP range (CIDR)	-range 103.0.0.0/8
--country	Scan by country	-country id
--L	Target list file	-L targets.txt
--U	Username file	-U users.txt
--P	Password file	-P passwords.txt
--t	Number of threads	-t 50
--rate	Scan speed (packets/sec)	-rate 50000
--output	Output directory	-output ./results
--no-scan	Skip scanning, direct bruteforce	-no-scan
+
+### 🇮🇩 Bahasa Indonesia
+| Parameter | Fungsi | Contoh |
+|-----------|--------|--------|
+| `-range` | Scan IP range (CIDR) | `-range 103.0.0.0/8` |
+| `-country` | Scan per negara | `-country id` |
+| `-L` | File daftar target | `-L targets.txt` |
+| `-U` | File username | `-U users.txt` |
+| `-P` | File password | `-P passwords.txt` |
+| `-t` | Jumlah thread | `-t 50` |
+| `-rate` | Kecepatan scan (packet/detik) | `-rate 50000` |
+| `-output` | Folder hasil | `-output ./hasil` |
+| `-no-scan` | Lewati scanning, langsung bruteforce | `-no-scan` |
+
+### 🇬🇧 English
+| Parameter | Function | Example |
+|-----------|----------|---------|
+| `-range` | Scan IP range (CIDR) | `-range 103.0.0.0/8` |
+| `-country` | Scan by country | `-country id` |
+| `-L` | Target list file | `-L targets.txt` |
+| `-U` | Username file | `-U users.txt` |
+| `-P` | Password file | `-P passwords.txt` |
+| `-t` | Number of threads | `-t 50` |
+| `-rate` | Scan speed (packets/sec) | `-rate 50000` |
+| `-output` | Output directory | `-output ./results` |
+| `-no-scan` | Skip scanning, direct bruteforce | `-no-scan` |
 📚 Penjelasan Fitur & Cara Penggunaan | Features Explanation & Usage
 🇮🇩 Bahasa Indonesia
 1. Scan IP Range
