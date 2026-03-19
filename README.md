@@ -1,37 +1,76 @@
 # GoSSHBruteforce 🔥
 
-[![Go Version](https://img.shields.io/badge/Go-1.21+-00ADD8?style=flat&logo=go)](https://golang.org/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![Author](https://img.shields.io/badge/Author-b2hunters.id-red.svg)](https://github.com/b2hunters)
+[![Go Version](https://img.shields.io/badge/Go-1.22+-00ADD8?style=flat&logo=go)](https://golang.org/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Author](https://img.shields.io/badge/Author-b2hunters.id-red.svg)](https://github.com/GhostlyrootB2H)
 
-> Advanced SSH scanning and bruteforcing tool - Scan entire internet, crack SSH passwords, harvest VPS
+**Advanced SSH Scanner & Bruteforce Tool**  
+*Tools canggih untuk scanning dan bruteforce SSH*
 
-**Author: b2hunters.id**
+---
 
-## ⚡ Features
+## 📋 **Daftar Isi | Table of Contents**
+- [Fitur Utama | Key Features](#fitur-utama--key-features)
+- [Instalasi | Installation](#instalasi--installation)
+- [Cara Penggunaan | Usage](#cara-penggunaan--usage)
+- [Penjelasan Fitur | Features Explanation](#penjelasan-fitur--features-explanation)
+- [Contoh Penggunaan | Examples](#contoh-penggunaan--examples)
+- [Tips & Trik | Tips & Tricks](#tips--trik--tips--tricks)
+- [Peringatan | Warning](#peringatan--warning)
+- [Lisensi | License](#lisensi--license)
 
-### 🎯 Scanning Phase
-- **Masscan Integration**: Scan entire internet (`0.0.0.0/0`) at 100k+ packets/sec
-- **Country-Specific Scanning**: Pre-configured IP ranges for 15+ countries
-- **Auto-Filtering**: Automatically excludes private, reserved, and government IPs
-- **Multi-Format Input**: CIDR ranges, single IPs, or file-based targets
+---
 
-### 💀 Bruteforce Phase
-- **Goroutine-Based Concurrency**: Thousands of simultaneous connections
-- **Legacy Algorithm Support**: Works with old SSH servers (diffie-hellman-group1-sha1, etc.)
-- **Intelligent Rate Limiting**: Prevents connection flooding and IP bans
-- **Progress Bar**: Real-time visualization of attack progress
-- **Stats Monitoring**: Attempts/sec, success rate, elapsed time
-- **Auto-Save**: All credentials automatically saved
+## 🚀 **Fitur Utama | Key Features**
 
-## 🚀 Quick Start
+### **🇮🇩 Bahasa Indonesia**
+| Fitur | Deskripsi |
+|-------|-----------|
+| **Scan IP Range** | Scan jutaan IP untuk mencari server SSH yang terbuka (port 22) |
+| **Scan per Negara** | Scan IP berdasarkan negara (Indonesia, Rusia, China, dll) |
+| **Bruteforce SSH** | Multi-threaded SSH bruteforce dengan kecepatan tinggi |
+| **Mass Bruteforce** | Serang ribuan target sekaligus dari file hasil scan |
+| **Custom Wordlist** | Gunakan file username dan password sendiri |
+| **Auto-Save Results** | Semua credential berhasil otomatis tersimpan |
+| **Progress Bar** | Monitor real-time proses bruteforce |
+| **Stealth Mode** | Bisa diatur agar tidak terdeteksi firewall |
+
+### **🇬🇧 English**
+| Feature | Description |
+|---------|-------------|
+| **IP Range Scan** | Scan millions of IPs for open SSH servers (port 22) |
+| **Country Scan** | Scan IPs by country (Indonesia, Russia, China, etc.) |
+| **SSH Bruteforce** | Multi-threaded SSH bruteforce with high speed |
+| **Mass Bruteforce** | Attack thousands of targets from scan results file |
+| **Custom Wordlist** | Use your own username and password files |
+| **Auto-Save Results** | All successful credentials are automatically saved |
+| **Progress Bar** | Real-time monitoring of bruteforce process |
+| **Stealth Mode** | Configurable to avoid firewall detection |
+
+---
+
+## 📦 **Instalasi | Installation**
+
+### **🇮🇩 Bahasa Indonesia**
+
+#### **Persyaratan Sistem**
+- **OS:** Linux (Ubuntu/Debian/Kali)
+- **Go:** Versi 1.22 atau lebih baru
+- **Masscan:** Untuk scanning IP (akan diinstall otomatis)
+
+#### **Langkah Instalasi**
 
 ```bash
-# Clone and build
-git clone https://github.com/b2hunters/GoSSHBruteforce.git
+# 1. Clone repository
+git clone https://github.com/GhostlyrootB2H/GoSSHBruteforce.git
 cd GoSSHBruteforce
-make install-deps
-make build
 
-# Run as root (required for masscan)
-sudo ./build/gosshtool -country id -t 50
+# 2. Install dependencies (masscan)
+chmod +x scripts/install_deps.sh
+sudo ./scripts/install_deps.sh
+
+# 3. Build tools
+go build -o gosshtool cmd/gosshtool/main.go
+
+# 4. Tes apakah berhasil
+./gosshtool -h
