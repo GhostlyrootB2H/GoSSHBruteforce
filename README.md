@@ -79,3 +79,5 @@ go build -o gosshtool cmd/gosshtool/main.go
 
 # 4. Tes apakah berhasil
 ./gosshtool -h
+
+### **Estimasi Waktu Instalasi**
