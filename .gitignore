@@ -43,3 +43,4 @@ configs/local.yaml
 # Temporary files
 tmp/
 temp/
+*.tar.gz
